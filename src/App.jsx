@@ -1,4 +1,6 @@
-import { useCatImage, useCatFact } from "./hooks/UseCatImage";
+import { useCatImage } from "./hooks/UseCatImage";
+import { useCatFact } from "./hooks/useCatFact";
+
 const CAD_PREFIX = "https://cataas.com";
 
 export function App() {
