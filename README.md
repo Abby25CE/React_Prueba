@@ -15,3 +15,7 @@ Segunda API muestra fotos de gatos
 
 npm install
 npm run dev
+
+Npx to test
+npm init playwright@latest
+npx playwright test
