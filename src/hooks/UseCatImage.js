@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+const CAD_PREFIX = "https://cataas.com";
 
 export function useCatImage({ facts }) {
     const [imageUrl, setImageUrl] = useState();
@@ -18,5 +19,7 @@ export function useCatImage({ facts }) {
                 console.log(url);
             });
     }, [facts]);
-    return imageUrl;
+    return {
+        imageUrl: `${CAD_PREFIX}${imageUrl}`
+    };
 }

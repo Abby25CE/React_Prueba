@@ -1,11 +1,9 @@
-import { useCatImage } from "./hooks/UseCatImage";
+import { Otro } from "./components/Otro";
 import { useCatFact } from "./hooks/useCatFact";
-
-const CAD_PREFIX = "https://cataas.com";
 
 export function App() {
   const [facts, refresFact] = useCatFact();
-  const imageURL = useCatImage({ facts });
+  const imageURL = Otro();
 
   const handleClick = async () => {
     refresFact();
@@ -21,7 +19,9 @@ export function App() {
         Nuevo dato random
       </button>
       {facts && <p>{facts}</p>}
-      {imageURL && <img src={`${CAD_PREFIX}${imageURL}`} />}
+      {imageURL && <img src={imageURL} />}
+
+      <Otro />
     </div>
   );
 }
